@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		6377523424EA89C5004A647C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6377523224EA89C5004A647C /* LaunchScreen.storyboard */; };
 		6377523F24EA89C5004A647C /* EbbingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377523E24EA89C5004A647C /* EbbingTests.swift */; };
 		6377524A24EA89C5004A647C /* EbbingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377524924EA89C5004A647C /* EbbingUITests.swift */; };
+		6377525924EA8A5B004A647C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6377525824EA8A5B004A647C /* RxCocoa */; };
+		6377525B24EA8A5B004A647C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6377525A24EA8A5B004A647C /* RxSwift */; };
+		6377525D24EA8A5B004A647C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6377525C24EA8A5B004A647C /* RxRelay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6377525D24EA8A5B004A647C /* RxRelay in Frameworks */,
+				6377525B24EA8A5B004A647C /* RxSwift in Frameworks */,
+				6377525924EA8A5B004A647C /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +161,11 @@
 			dependencies = (
 			);
 			name = Ebbing;
+			packageProductDependencies = (
+				6377525824EA8A5B004A647C /* RxCocoa */,
+				6377525A24EA8A5B004A647C /* RxSwift */,
+				6377525C24EA8A5B004A647C /* RxRelay */,
+			);
 			productName = Ebbing;
 			productReference = 6377522124EA89C3004A647C /* Ebbing.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 6377521824EA89C3004A647C;
+			packageReferences = (
+				6377525724EA8A5B004A647C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 6377522224EA89C3004A647C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,6 +457,7 @@
 				DEVELOPMENT_TEAM = LVP2D6C49Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Ebbing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,6 +478,7 @@
 				DEVELOPMENT_TEAM = LVP2D6C49Q;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Ebbing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -598,6 +614,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6377525724EA8A5B004A647C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6377525824EA8A5B004A647C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6377525724EA8A5B004A647C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6377525A24EA8A5B004A647C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6377525724EA8A5B004A647C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		6377525C24EA8A5B004A647C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6377525724EA8A5B004A647C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		6377522824EA89C3004A647C /* Ebbing.xcdatamodeld */ = {
