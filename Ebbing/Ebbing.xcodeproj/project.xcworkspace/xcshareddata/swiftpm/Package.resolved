@@ -47,6 +47,15 @@
         }
       },
       {
+        "package": "RxFlow",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxFlow",
+        "state": {
+          "branch": null,
+          "revision": "31557fa4a216387134c93db14130dfc45574b67d",
+          "version": "2.9.0"
+        }
+      },
+      {
         "package": "RxGesture",
         "repositoryURL": "https://github.com/RxSwiftCommunity/RxGesture",
         "state": {
