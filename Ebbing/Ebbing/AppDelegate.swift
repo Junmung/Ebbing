@@ -8,14 +8,27 @@
 
 import UIKit
 import CoreData
+import RxSwift
+import RxFlow
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    let disposeBag = DisposeBag()
+    var window: UIWindow?
+    var coordinator = FlowCoordinator()
+    var appFlow: AppFlow!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        guard let window = self.window else { return false }
+        coordinator.rx.willNavigate.subscribe(onNext: { flow, step in
+            print("will navigate to flow = \(flow) and step = \(step)")
+        }).disposed(by: self.disposeBag)
+        
+        coordinator.rx.didNavigate.subscribe(onNext: { flow, step in
+            print("did navigate to flow = \(flow) and step = \(step)")
+        }).disposed(by: disposeBag)
+        
+        self.appFlow = AppFlow(withWindow: window, andServ)
         return true
     }
 
