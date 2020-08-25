@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import RxFlow
 
 final class AppFlow: Flow {
@@ -29,38 +30,21 @@ final class AppFlow: Flow {
 
         switch step {
         case .mainIsRequired:
-            return navigationToOnboardingScreen()
-        case .addSubjectIsRequired:
-            return navigationToDashboardScreen()
+            return navigationToMainScreen()
         default:
-            return FlowContributors.none
+            return .none
         }
     }
 
-    private func navigationToOnboardingScreen() -> FlowContributors {
-
-        if let rootViewController = self.rootWindow.rootViewController {
-            rootViewController.dismiss(animated: false)
-        }
-
-        let onboardingFlow = OnboardingFlow(withServices: self.services)
-        Flows.whenReady(flow1: onboardingFlow) { [unowned self] (root) in
+    private func navigationToMainScreen() -> FlowContributors {
+        let mainFlow = MainFlow(withServices: self.services)
+        Flows.use(mainFlow, when: .ready) { [unowned self] (root) in
             self.rootWindow.rootViewController = root
         }
-
-        return .one(flowContributor: .contribute(withNextPresentable: onboardingFlow, withNextStepper: OneStepper(withSingleStep: SampleStep.introIsRequired)))
+        
+        return .one(flowContributor: .contribute(withNextPresentable: mainFlow, withNextStepper: OneStepper(withSingleStep: EbbingStep.mainIsRequired)))
     }
 
-    private func navigationToDashboardScreen() -> FlowContributors {
-        let dashboardFlow = DashboardFlow(withServices: self.services)
-
-        Flows.whenReady(flow1: dashboardFlow) { [unowned self] (root) in
-            self.rootWindow.rootViewController = root
-        }
-
-        return .one(flowContributor: .contribute(withNextPresentable: dashboardFlow,
-                                                 withNextStepper: OneStepper(withSingleStep: SampleStep.dashboardIsRequired)))
-    }
 }
 
 class AppStepper: Stepper {
@@ -68,25 +52,9 @@ class AppStepper: Stepper {
     let steps = PublishRelay<Step>()
     private let appServices: AppServices
     private let disposeBag = DisposeBag()
+    var initialStep: Step { EbbingStep.mainIsRequired }
 
     init(withServices services: AppServices) {
         self.appServices = services
-    }
-
-    var initialStep: Step {
-//        return SampleStep.dashboardIsRequired
-        return SampleStep.onboardingIsRequired
-    }
-
-    /// callback used to emit steps once the FlowCoordinator is ready to listen to them to contribute to the Flow
-    func readyToEmitSteps() {
-        self.appServices
-            .preferencesService.rx
-            .isOnboarded
-            .debug()
-            .map { $0 ? SampleStep.onboardingIsComplete : SampleStep.onboardingIsRequired }
-            .debug()
-            .bind(to: self.steps)
-            .disposed(by: self.disposeBag)
     }
 }
