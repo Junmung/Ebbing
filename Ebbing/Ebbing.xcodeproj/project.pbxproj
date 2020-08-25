@@ -29,6 +29,11 @@
 		6377526B24EA8C50004A647C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6377526A24EA8C50004A647C /* SnapKit */; };
 		6377526E24EA8FDA004A647C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 6377526D24EA8FDA004A647C /* Realm */; };
 		6377527024EA8FDA004A647C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6377526F24EA8FDA004A647C /* RealmSwift */; };
+		AD231B6A24F2627A00ED59B8 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B6924F2627A00ED59B8 /* MainFlow.swift */; };
+		AD231B6D24F2648F00ED59B8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B6C24F2648F00ED59B8 /* MainVC.swift */; };
+		AD231B6F24F264BE00ED59B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B6E24F264BE00ED59B8 /* MainView.swift */; };
+		AD231B7124F2654F00ED59B8 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B7024F2654F00ED59B8 /* MainReactor.swift */; };
+		AD231B7324F26F3900ED59B8 /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD231B7224F26F3900ED59B8 /* MainVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		6377524524EA89C5004A647C /* EbbingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EbbingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6377524924EA89C5004A647C /* EbbingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EbbingUITests.swift; sourceTree = "<group>"; };
 		6377524B24EA89C5004A647C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD231B6924F2627A00ED59B8 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		AD231B6C24F2648F00ED59B8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		AD231B6E24F264BE00ED59B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		AD231B7024F2654F00ED59B8 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
+		AD231B7224F26F3900ED59B8 /* MainVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVC.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +127,7 @@
 			children = (
 				633976F124EC227700D03EFA /* AppFlow.swift */,
 				633976F324EC231100D03EFA /* EbbingStep.swift */,
+				AD231B6924F2627A00ED59B8 /* MainFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 		6377522324EA89C3004A647C /* Ebbing */ = {
 			isa = PBXGroup;
 			children = (
+				AD231B6B24F2647400ED59B8 /* Main */,
 				633976F024EC226E00D03EFA /* Flows */,
 				633976ED24EC202500D03EFA /* Base */,
 				6377522424EA89C3004A647C /* AppDelegate.swift */,
@@ -181,6 +193,17 @@
 				6377524B24EA89C5004A647C /* Info.plist */,
 			);
 			path = EbbingUITests;
+			sourceTree = "<group>";
+		};
+		AD231B6B24F2647400ED59B8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AD231B6E24F264BE00ED59B8 /* MainView.swift */,
+				AD231B7024F2654F00ED59B8 /* MainReactor.swift */,
+				AD231B6C24F2648F00ED59B8 /* MainVC.swift */,
+				AD231B7224F26F3900ED59B8 /* MainVC.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +334,7 @@
 			files = (
 				6377523424EA89C5004A647C /* LaunchScreen.storyboard in Resources */,
 				6377523124EA89C5004A647C /* Preview Assets.xcassets in Resources */,
+				AD231B7324F26F3900ED59B8 /* MainVC.storyboard in Resources */,
 				6377522E24EA89C5004A647C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,9 +361,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6377522524EA89C3004A647C /* AppDelegate.swift in Sources */,
+				AD231B7124F2654F00ED59B8 /* MainReactor.swift in Sources */,
+				AD231B6D24F2648F00ED59B8 /* MainVC.swift in Sources */,
 				633976F424EC231100D03EFA /* EbbingStep.swift in Sources */,
 				633976F224EC227700D03EFA /* AppFlow.swift in Sources */,
 				6377522724EA89C3004A647C /* SceneDelegate.swift in Sources */,
+				AD231B6A24F2627A00ED59B8 /* MainFlow.swift in Sources */,
+				AD231B6F24F264BE00ED59B8 /* MainView.swift in Sources */,
 				6377522A24EA89C3004A647C /* Ebbing.xcdatamodeld in Sources */,
 				633976EF24EC203300D03EFA /* BaseVC.swift in Sources */,
 			);
