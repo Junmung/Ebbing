@@ -14,7 +14,6 @@
 		6377522524EA89C3004A647C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377522424EA89C3004A647C /* AppDelegate.swift */; };
 		6377522724EA89C3004A647C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377522624EA89C3004A647C /* SceneDelegate.swift */; };
 		6377522A24EA89C3004A647C /* Ebbing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6377522824EA89C3004A647C /* Ebbing.xcdatamodeld */; };
-		6377522C24EA89C3004A647C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377522B24EA89C3004A647C /* ContentView.swift */; };
 		6377522E24EA89C5004A647C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6377522D24EA89C5004A647C /* Assets.xcassets */; };
 		6377523124EA89C5004A647C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6377523024EA89C5004A647C /* Preview Assets.xcassets */; };
 		6377523424EA89C5004A647C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6377523224EA89C5004A647C /* LaunchScreen.storyboard */; };
@@ -57,7 +56,6 @@
 		6377522424EA89C3004A647C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6377522624EA89C3004A647C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6377522924EA89C3004A647C /* Ebbing.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ebbing.xcdatamodel; sourceTree = "<group>"; };
-		6377522B24EA89C3004A647C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6377522D24EA89C5004A647C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6377523024EA89C5004A647C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6377523324EA89C5004A647C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				633976ED24EC202500D03EFA /* Base */,
 				6377522424EA89C3004A647C /* AppDelegate.swift */,
 				6377522624EA89C3004A647C /* SceneDelegate.swift */,
-				6377522B24EA89C3004A647C /* ContentView.swift */,
 				6377522D24EA89C5004A647C /* Assets.xcassets */,
 				6377523224EA89C5004A647C /* LaunchScreen.storyboard */,
 				6377523524EA89C5004A647C /* Info.plist */,
@@ -343,7 +340,6 @@
 				633976F424EC231100D03EFA /* EbbingStep.swift in Sources */,
 				633976F224EC227700D03EFA /* AppFlow.swift in Sources */,
 				6377522724EA89C3004A647C /* SceneDelegate.swift in Sources */,
-				6377522C24EA89C3004A647C /* ContentView.swift in Sources */,
 				6377522A24EA89C3004A647C /* Ebbing.xcdatamodeld in Sources */,
 				633976EF24EC203300D03EFA /* BaseVC.swift in Sources */,
 			);
