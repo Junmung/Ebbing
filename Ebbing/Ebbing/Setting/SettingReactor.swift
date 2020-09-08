@@ -1,35 +1,31 @@
 //
-//  MainReactor.swift
+//  SettingReactor.swift
 //  Ebbing
 //
-//  Created by LeeJunSung on 2020/08/23.
+//  Created by LeeJunSung on 2020/09/07.
 //  Copyright © 2020 Junsung. All rights reserved.
 //
 
 import ReactorKit
-import RxFlow
 
-class MainReactor: Reactor {
+class SettingReactor: Reactor {
     enum Action {
         case loadSubjects
         case addSubjectClicked
-        case clickSetting
     }
     
     enum Mutation {
         case setSubjects
-        case moveSetting
     }
     
     struct State {
-        var mainTitle: String
-        var step: Step = EbbingStep.mainIsRequired
+        var title: String
     }
     
     var initialState: State
     
     init(_ title: String) {
-        initialState = .init(mainTitle: title)
+        initialState = .init(title: title)
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -38,8 +34,7 @@ class MainReactor: Reactor {
             return .just(.setSubjects)
         case .addSubjectClicked:
             return .just(.setSubjects)
-        case .clickSetting:
-            return .just(.moveSetting)
+            
         }
     }
     
@@ -48,13 +43,10 @@ class MainReactor: Reactor {
         switch mutation {
         case .setSubjects:
             print("set Subjects")
-            
-        case .moveSetting:
-            state.step = EbbingStep.settingIsRequired
-            
         }
         return state
     }
     
 }
+
 

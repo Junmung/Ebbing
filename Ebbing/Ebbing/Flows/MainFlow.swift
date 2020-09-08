@@ -28,6 +28,9 @@ final class MainFlow: Flow {
         case .mainIsRequired:
             return navigateToMain()
             
+        case .settingIsRequired:
+            return navigationToSettingScreen()
+            
         default:
             return .none
         }
@@ -41,5 +44,12 @@ final class MainFlow: Flow {
         self.rootViewController.pushViewController(mainVC, animated: true)
 
         return .one(flowContributor: .contribute(withNextPresentable: mainVC, withNextStepper: OneStepper(withSingleStep: EbbingStep.mainIsRequired), allowStepWhenNotPresented: false))
-        }
+    }
+    
+    private func navigationToSettingScreen() -> FlowContributors {
+        let settingFlow = SettingFlow(withServices: self.services)
+        
+        // settingFlow를 만들어서 시작
+    }
+    
 }

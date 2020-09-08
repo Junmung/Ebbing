@@ -11,6 +11,9 @@ enum EbbingStep: Step {
     // Main
     case mainIsRequired
     
+    // Setting
+    case settingIsRequired
+    
     // Add Subject
     case addSubjectIsRequired
 }

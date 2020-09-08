@@ -35,6 +35,11 @@
 		AD231B6F24F264BE00ED59B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B6E24F264BE00ED59B8 /* MainView.swift */; };
 		AD231B7124F2654F00ED59B8 /* MainReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD231B7024F2654F00ED59B8 /* MainReactor.swift */; };
 		AD231B7324F26F3900ED59B8 /* MainVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD231B7224F26F3900ED59B8 /* MainVC.storyboard */; };
+		ADCD57C625067AB2006958A9 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCD57C525067AB2006958A9 /* SettingVC.swift */; };
+		ADCD57C825067AC1006958A9 /* SettingVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCD57C725067AC1006958A9 /* SettingVC.storyboard */; };
+		ADCD57CA25067B45006958A9 /* SettingReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCD57C925067B45006958A9 /* SettingReactor.swift */; };
+		ADCD57CC25067B77006958A9 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCD57CB25067B77006958A9 /* SettingView.swift */; };
+		ADCD57CE25068C66006958A9 /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCD57CD25068C66006958A9 /* SettingFlow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +83,11 @@
 		AD231B6E24F264BE00ED59B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AD231B7024F2654F00ED59B8 /* MainReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainReactor.swift; sourceTree = "<group>"; };
 		AD231B7224F26F3900ED59B8 /* MainVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainVC.storyboard; sourceTree = "<group>"; };
+		ADCD57C525067AB2006958A9 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		ADCD57C725067AC1006958A9 /* SettingVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingVC.storyboard; sourceTree = "<group>"; };
+		ADCD57C925067B45006958A9 /* SettingReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingReactor.swift; sourceTree = "<group>"; };
+		ADCD57CB25067B77006958A9 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		ADCD57CD25068C66006958A9 /* SettingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFlow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +140,7 @@
 				633976F124EC227700D03EFA /* AppFlow.swift */,
 				633976F324EC231100D03EFA /* EbbingStep.swift */,
 				AD231B6924F2627A00ED59B8 /* MainFlow.swift */,
+				ADCD57CD25068C66006958A9 /* SettingFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -157,6 +168,7 @@
 		6377522324EA89C3004A647C /* Ebbing */ = {
 			isa = PBXGroup;
 			children = (
+				ADCD57C425067A6F006958A9 /* Setting */,
 				AD231B6B24F2647400ED59B8 /* Main */,
 				633976F024EC226E00D03EFA /* Flows */,
 				633976ED24EC202500D03EFA /* Base */,
@@ -215,6 +227,17 @@
 				AD231B7224F26F3900ED59B8 /* MainVC.storyboard */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		ADCD57C425067A6F006958A9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				ADCD57CB25067B77006958A9 /* SettingView.swift */,
+				ADCD57C925067B45006958A9 /* SettingReactor.swift */,
+				ADCD57C525067AB2006958A9 /* SettingVC.swift */,
+				ADCD57C725067AC1006958A9 /* SettingVC.storyboard */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCD57C825067AC1006958A9 /* SettingVC.storyboard in Resources */,
 				6377523424EA89C5004A647C /* LaunchScreen.storyboard in Resources */,
 				6377523124EA89C5004A647C /* Preview Assets.xcassets in Resources */,
 				AD231B7324F26F3900ED59B8 /* MainVC.storyboard in Resources */,
@@ -372,9 +396,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6377522524EA89C3004A647C /* AppDelegate.swift in Sources */,
+				ADCD57C625067AB2006958A9 /* SettingVC.swift in Sources */,
 				AD231B7124F2654F00ED59B8 /* MainReactor.swift in Sources */,
+				ADCD57CE25068C66006958A9 /* SettingFlow.swift in Sources */,
+				ADCD57CC25067B77006958A9 /* SettingView.swift in Sources */,
 				AD231B6D24F2648F00ED59B8 /* MainVC.swift in Sources */,
 				633976F424EC231100D03EFA /* EbbingStep.swift in Sources */,
+				ADCD57CA25067B45006958A9 /* SettingReactor.swift in Sources */,
 				633976F224EC227700D03EFA /* AppFlow.swift in Sources */,
 				AD231B6824F261AB00ED59B8 /* PreferencesService.swift in Sources */,
 				6377522724EA89C3004A647C /* SceneDelegate.swift in Sources */,
